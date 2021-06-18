@@ -28,11 +28,11 @@ CREATE TABLE Staff_Member(
 INSERT INTO Staff_Member
 	(SID, F_Name, L_Name, S_Add, J_Type, DOB)
 VALUES
-('S1001', 'Randil', 'Samarawickrama', 'No. 23, Hospital Road, Galle.', 'Manager', '1992.05.26'),
-('S1002', 'Anuttara', 'Bandara', 'No. 4/32, School Road, Panadura.', 'Customer Support', '1993.08.02'),
-('S1003', 'Sangeeth', 'Selvakumar', 'No. 08, Garden Street, Hatton.', 'Executive', '1995.06.20'),
-('S1004', 'Kasun', 'Weerasingha', 'No.12, Galle Road, Colombo 03.', 'Assistant Manager', '1996.02.06'),
-('S1005', 'Chamath', 'Guruge', 'No. 128/A, Main Road, Kurunagala.', 'Marketing Manager', '1990.12.07');
+('S1001', 'Randil', 'Samarawickrama', 'No. 23, Hospital Road, Galle.', 'Manager', '1992-05-26'),
+('S1002', 'Anuttara', 'Bandara', 'No. 4/32, School Road, Panadura.', 'Customer Support', '1993-08-02'),
+('S1003', 'Sangeeth', 'Selvakumar', 'No. 08, Garden Street, Hatton.', 'Executive', '1995-06-20'),
+('S1004', 'Kasun', 'Weerasingha', 'No.12, Galle Road, Colombo 03.', 'Assistant Manager', '1996-02-06'),
+('S1005', 'Chamath', 'Guruge', 'No. 128/A, Main Road, Kurunagala.', 'Marketing Manager', '1990-12-07');
 
 
 CREATE TABLE Booking(
@@ -49,12 +49,12 @@ CREATE TABLE Booking(
 INSERT INTO Booking
 	(BID, T_Amt, RID, ID, S_Time, E_Time, B_Date, N_At)
 VALUES
-  ('B6561','60000','R5261','C2236','09:30:00','11:30:00','2020/01/04','45'),
-  ('B6562','45000','R5426','C2237','07:30:00','12:00:00','2020/01/25','2'),
-  ('B6563','62000','R6728','C2238','11:00:00','01:30:00','2020/02/15','30'),
-  ('B6564','-','R6729','S1001','10:45:00','12:00:00','2020/03/16','5'),
-  ('B6565','-','R4241','S1002','02:15:00','03:45:00','2020/04/28','55'),
-  ('B6566','-','R5426','S1003','08:00:00','04:30:00','2020/05/11','2');
+  ('B6561','60000','R5261','C2236','09:30:00','11:30:00','2020-01-04','45'),
+  ('B6562','45000','R5426','C2237','07:30:00','12:00:00','2020-01-25','2'),
+  ('B6563','62000','R6728','C2238','11:00:00','01:30:00','2020-02-15','30'),
+  ('B6564','-','R6729','S1001','10:45:00','12:00:00','2020-03-16','5'),
+  ('B6565','-','R4241','S1002','02:15:00','03:45:00','2020-04-28','55'),
+  ('B6566','-','R5426','S1003','08:00:00','04:30:00','2020-05-11','2');
 
 
 CREATE TABLE Resources(
