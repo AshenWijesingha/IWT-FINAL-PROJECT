@@ -1,29 +1,37 @@
 <?php
   include '../HeaderFooter/header.php';
 
-  if($_SERVER["REQUEST_METHOD"] == "POST") {
+  if(isset($_POST["email"])) {
     // username and password sent from form 
     
-    $myemail = mysqli_real_escape_string($db,$_POST['Email']);
-    $mypassword = mysqli_real_escape_string($db,$_POST['Password']); 
+    $myemail = $_POST['email'];
+    $mypassword = $_POST['pwd']; 
     
-    $sql = "SELECT Email FROM Users WHERE Email = '$myemail' and Password = '$mypassword'";
-    $result = mysqli_query($db,$sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
+    $sql = mysqli_query($conn, "SELECT * FROM Users WHERE Email='" . $myemail . "'");
     
-    $count = mysqli_num_rows($result);
+    $row  = mysqli_fetch_array($sql);
     
-    // If result matched $myusername and $mypassword, table row must be 1 row
-  
-    if($count == 1) {
-       session_start();
-       $_SESSION['login_user'] = $myemail;
-       
-       header("location: ../home/index.php");
+   // Password validation
+    if ($row['Password'] === $mypassword) {
+        $checkPwd = true;
+    } else {
+        $checkPwd = false;
+    }
 
-    }else {
-       $error = "Your Login Name or Password is invalid";
+    if ($checkPwd === false) {
+        header("location: ../Login.html/Login.php?error=wrongpassword");
+        exit();
+    }
+
+  
+    if($checkPwd === true) {
+      session_start();
+      $_SESSION["id"] = $row['Uid'];
+      $_SESSION["name"] = $row['Name'];
+      $_SESSION["email"] = $row['Email'];
+       
+      header("location: ../Home/index.php");
+
     }
  }
 
@@ -45,10 +53,11 @@
           <h2 style="text-align: center; font-family: 'Courier New', Courier, monospace; font-style: oblique; font-size: 5rem; display:block; text-shadow: 2px 1px #fff;">L o g i n</h2>
           <p style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 3rem; display: block; text-shadow: 1px 1px #000;">Enter Your Login Credentials to log in to the System</p>
           <div id="Login_page" class="center">
+
             <form style="margin: auto; left: 38%; right: inherit;" method="post" action = "">
               <div class="form-group">
-                <label for="usr" style="font-family: 'Courier New', Courier, monospace; font-size: 2rem; display: block; text-shadow: 1px 1px #000;">Name:</label>
-                <input type="text" class="form-control" id="usr" style="width:75%;" name="uname">
+                <label for="usr" style="font-family: 'Courier New', Courier, monospace; font-size: 2rem; display: block; text-shadow: 1px 1px #000;">Email:</label>
+                <input type="text" class="form-control" id="usr" style="width:75%;" name="email">
               </div>
               <div class="form-group">
                 <label for="pwd" style="font-family: 'Courier New', Courier, monospace; font-size: 2rem; display: inline-block; text-shadow: 1px 1px #000;">Password:</label>
@@ -59,9 +68,9 @@
                 <div style="margin: 0; position: absolute; top: 60%; left: 15%; right: 26%; -ms-transform: translateY(-50%); transform: translateY(-50%); width: fit-content;">
                   <button class="navbar__btn button1" style="display: flex; box-shadow: 2px 2px 1px 1px #000; align-items: flex-start; cursor: pointer;">Login</button>
                 </div> 
-                <div style="margin: 0; position: absolute; top: 60%; left: 40%; right: 0%; -ms-transform: translateY(-50%); transform: translateY(-50%); width: fit-content;">
+                <!-- <div style="margin: 0; position: absolute; top: 60%; left: 40%; right: 0%; -ms-transform: translateY(-50%); transform: translateY(-50%); width: fit-content;">
                   <button formaction="\iwtProject\Signe Up Page.html\SigneUpPage.php" class="navbar__btn button1" style="display: flex; box-shadow: 2px 2px 1px 1px #000; align-items: flex-start; cursor: pointer; ">Sigh Up</button>
-                </div>
+                </div> -->
               </div>
 
               <div>

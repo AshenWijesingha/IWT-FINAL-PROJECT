@@ -1,5 +1,6 @@
 <?php
-    include '../Database/dbh.inc.php'
+  session_start();
+  include '../Database/dbh.inc.php'
 ?>
 
 <!DOCTYPE html>
