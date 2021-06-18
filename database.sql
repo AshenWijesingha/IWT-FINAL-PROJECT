@@ -1,5 +1,6 @@
 CREATE TABLE Users(
-	Name varchar(50) NOT NULL,
+  Uid INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	Name varchar(50) PRIMARY KEY NOT NULL,
   Email varchar(20) NOT NULL,
   mobile varchar(20) NOT NULL,
   Password varchar(20) NOT NULL,
@@ -35,7 +36,7 @@ VALUES
 
 
 CREATE TABLE Booking(
-  BID char(5) NOT NULL,
+  BID char(5) PRIMARY KEY NOT NULL,
   T_Amt varchar(100) ,
   RID char(5) NOT NULL,
   ID char(5) NOT NULL,
@@ -57,7 +58,7 @@ VALUES
 
 
 CREATE TABLE Resources(
-  RID char(5) NOT NULL,
+  RID char(5) PRIMARY KEY NOT NULL,
   R_Value varchar(100),
   Max_Att int,
   R_Type varchar(200),
@@ -75,7 +76,7 @@ VALUES
 
 
 CREATE TABLE Feed_back(
-  Name varchar(50) not null,
+  Name varchar(50) PRIMARY KEY not null,
   BID varchar(20)not null,
   Email varchar(20),
   Cmnt varchar(100),
