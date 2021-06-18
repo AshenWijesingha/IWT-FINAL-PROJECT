@@ -1,5 +1,3 @@
-CREATE DATABASE resourcemanagementsystem;
-
 CREATE TABLE Users(
   Uid INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	Name varchar(50) NOT NULL,
@@ -19,16 +17,16 @@ VALUES
 
 
 CREATE TABLE Staff_Member(
-	SID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-	F_Name varchar(50) NOT NULL,
-	L_Name varchar(20) NOT NULL,
-	S_Add varchar(200) NOT NULL,
+  SID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  F_Name varchar(50) NOT NULL,
+  L_Name varchar(20) NOT NULL,
+  S_Add varchar(200) NOT NULL,
   J_Type varchar(20) NOT NULL,
   DOB date NOT NULL
 );
 
 INSERT INTO Staff_Member
-	(SID, F_Name, L_Name, S_Add, J_Type, DOB, )
+	(SID, F_Name, L_Name, S_Add, J_Type, DOB)
 VALUES
 ('S1001', 'Randil', 'Samarawickrama', 'No. 23, Hospital Road, Galle.', 'Manager', '1992.05.26'),
 ('S1002', 'Anuttara', 'Bandara', 'No. 4/32, School Road, Panadura.', 'Customer Support', '1993.08.02'),
