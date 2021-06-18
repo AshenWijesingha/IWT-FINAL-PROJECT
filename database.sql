@@ -2,7 +2,7 @@ CREATE DATABASE resourcemanagementsystem;
 
 CREATE TABLE Users(
   Uid INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-	Name varchar(50) PRIMARY KEY NOT NULL,
+	Name varchar(50) NOT NULL,
   Email varchar(20) NOT NULL,
   mobile varchar(20) NOT NULL,
   Password varchar(20) NOT NULL
