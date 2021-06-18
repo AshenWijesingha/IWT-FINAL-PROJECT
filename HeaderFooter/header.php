@@ -33,10 +33,10 @@
                 </li>
 
                 <li class="navbar__item">
-                  <a href="#" class="navbar__links" id="home-page">Home</a>
+                  <a href="" class="navbar__links" id="home-page">Home</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="\iwtProject\Available Resources.html\AvailableResources.php" class="navbar__links" id="AvailableResources-page">Available Resources</a>
+                  <a href="./Available Resources.html/AvailableResources.php" class="navbar__links" id="AvailableResources-page">Available Resources</a>
                 </li>
                 <li class="navbar__item">
                   <a href="\iwtProject\Resources.html\Resources.php" class="navbar__links" id="Resources-page">Resources</a>

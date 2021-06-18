@@ -1,5 +1,5 @@
 <?php
-  include 'header.php'
+  include '../HeaderFooter/header.php'
 ?>
 
 <!-- Body Start -->
@@ -60,6 +60,6 @@
 <!-- Body End -->
 
 <?php
-  include_once 'footer.php'
+  include_once '../HeaderFooter/footer.php'
 ?>
 
