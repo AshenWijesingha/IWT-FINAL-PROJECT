@@ -1,5 +1,5 @@
 <?php
-    include './Database/dbh.inc.php'
+    include '../Database/dbh.inc.php'
 ?>
 
 <!DOCTYPE html>
@@ -8,8 +8,8 @@
   <head>
     <meta charset="utf-8">
     <title>Simple website</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="mainfile.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../mainfile.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   </head>
@@ -18,7 +18,7 @@
 <!-- Start Nav Bar --> 
 <nav class="navbar" style="position: fixed; width: 100%;">
             <div class="navbar__container">
-              <a href="\iwtProject\index.php" id="navbar__logo">Resource Booking System</a>
+              <a href="../Home/index.php" id="navbar__logo">Resource Booking System</a>
               <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -33,25 +33,25 @@
                 </li>
 
                 <li class="navbar__item">
-                  <a href="" class="navbar__links" id="home-page">Home</a>
+                  <a href="../Home/index.php" class="navbar__links" id="home-page">Home</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="./Available Resources.html/AvailableResources.php" class="navbar__links" id="AvailableResources-page">Available Resources</a>
+                  <a href="../Available Resources.html/AvailableResources.php" class="navbar__links" id="AvailableResources-page">Available Resources</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="\iwtProject\Resources.html\Resources.php" class="navbar__links" id="Resources-page">Resources</a>
+                  <a href="../Resources.html/Resources.php" class="navbar__links" id="Resources-page">Resources</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="\iwtProject\Daily Shedule.html\DailyShedule.php" class="navbar__links" id="DailyShedule-page">Daily Shedule</a>
+                  <a href="../DailyShedule.html/DailyShedule.php" class="navbar__links" id="DailyShedule-page">Daily Shedule</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="\iwtProject\AboutUs.html\AboutUs.php" class="navbar__links" id="AboutUs-page">About Us</a>
+                  <a href="../AboutUs.html/AboutUs.php" class="navbar__links" id="AboutUs-page">About Us</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="\iwtProject\Contact Us.html\ContactUs.php" class="navbar__links" id="ContactUs-page">Contact Us</a>
+                  <a href="../Contact Us.html/ContactUs.php" class="navbar__links" id="ContactUs-page">Contact Us</a>
                 </li>
                 <li class="navbar__btn">
-                  <a href="\iwtProject\Login.html\Login.php" class="button1" id="LogIn" style="width:10rem;">Log In</a>
+                  <a href="../Login.html/Login.php" class="button1" id="LogIn" style="width:10rem;">Log In</a>
                 </li> 
               </ul>
             </div>
