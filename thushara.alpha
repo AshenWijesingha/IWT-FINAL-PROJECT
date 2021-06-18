@@ -1,0 +1,16 @@
+CREATE TABLE ContactUs(
+	conusID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	name varchar(30) NOT NULL,
+	email varchar(30) NOT NULL,
+	mobile varchar(20) NOT NULL,
+	message varchar(300) NOT NULL
+);
+
+INSERT INTO ContactUs
+	(name, email, mobile, message)
+VALUES
+	('Thushara Thiwanka', 'thushara@sliit.lk', '712345678', 'Hello admin'),
+	('Gaween Kanishka', 'gaween@sliit.lk', '724569356', 'Site is not working properly'),
+	('Chamath Jayasekara', 'chamath@sliit.lk', '774589632', 'Website too slow please fix'),
+	('Nikethani Gangoda', 'nikethani@sliit.lk', '775896458', 'Just want to say thanks'),
+	('Pamodya Daundasekara', 'pamodya@sliit.lk', '736526985', 'Nice website');
