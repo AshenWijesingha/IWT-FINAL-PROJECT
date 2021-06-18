@@ -11,7 +11,7 @@
 <h1 style="text-align: center; position: relative; width: 100%;">About Us</h1>
 <br>
 
-<div id="devCont_top" style="height: 53rem">  
+<div id="devCont_top" style="height: 45rem">  
 <p style="font-family:'Courier New', Courier, monospace; font-size:1.5rem; color:white; padding-top:1rem; padding-bottom:1rem;">Welcome to newly designed website resource booking system. Resource booking system for the management and schedule of your facilities and resources. This web site is a faster, cleaner, and secure more personal website, especially this web site designed to make your booking experience well.<br><br>
   
   Resource booking that provides organizations with complete over the resources they wish to be able to book. Also, the goal is help user to get more direct bookings easily & contribute to growing their business.<br><br>
