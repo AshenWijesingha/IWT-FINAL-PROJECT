@@ -1,5 +1,32 @@
 <?php
-  include '../HeaderFooter/header.php'
+  include '../HeaderFooter/header.php';
+
+  if($_SERVER["REQUEST_METHOD"] == "POST") {
+    // username and password sent from form 
+    
+    $myemail = mysqli_real_escape_string($db,$_POST['Email']);
+    $mypassword = mysqli_real_escape_string($db,$_POST['Password']); 
+    
+    $sql = "SELECT Email FROM Users WHERE Email = '$myemail' and Password = '$mypassword'";
+    $result = mysqli_query($db,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $active = $row['active'];
+    
+    $count = mysqli_num_rows($result);
+    
+    // If result matched $myusername and $mypassword, table row must be 1 row
+  
+    if($count == 1) {
+       session_start();
+       $_SESSION['login_user'] = $myemail;
+       
+       header("location: ../home/index.php");
+
+    }else {
+       $error = "Your Login Name or Password is invalid";
+    }
+ }
+
 ?>
 
 <!-- Body Start -->
@@ -18,7 +45,7 @@
           <h2 style="text-align: center; font-family: 'Courier New', Courier, monospace; font-style: oblique; font-size: 5rem; display:block; text-shadow: 2px 1px #fff;">L o g i n</h2>
           <p style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 3rem; display: block; text-shadow: 1px 1px #000;">Enter Your Login Credentials to log in to the System</p>
           <div id="Login_page" class="center">
-            <form style="margin: auto; left: 38%; right: inherit;" method="GET">
+            <form style="margin: auto; left: 38%; right: inherit;" method="post" action = "">
               <div class="form-group">
                 <label for="usr" style="font-family: 'Courier New', Courier, monospace; font-size: 2rem; display: block; text-shadow: 1px 1px #000;">Name:</label>
                 <input type="text" class="form-control" id="usr" style="width:75%;" name="uname">
@@ -36,9 +63,11 @@
                   <button formaction="\iwtProject\Signe Up Page.html\SigneUpPage.php" class="navbar__btn button1" style="display: flex; box-shadow: 2px 2px 1px 1px #000; align-items: flex-start; cursor: pointer; ">Sigh Up</button>
                 </div>
               </div>
+
               <div>
-                
-              </div>
+              <br>
+              <!-- <div style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 3rem; display: block; text-shadow: 1px 1px #000;"><?php echo $error; ?></div> -->
+            </div>
               
             </form>
           </div>
