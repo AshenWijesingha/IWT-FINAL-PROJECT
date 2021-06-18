@@ -1,9 +1,11 @@
+CREATE DATABASE resourcemanagementsystem;
+
 CREATE TABLE Users(
   Uid INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	Name varchar(50) PRIMARY KEY NOT NULL,
   Email varchar(20) NOT NULL,
   mobile varchar(20) NOT NULL,
-  Password varchar(20) NOT NULL,
+  Password varchar(20) NOT NULL
 );
 
 INSERT INTO Users
@@ -22,7 +24,7 @@ CREATE TABLE Staff_Member(
 	L_Name varchar(20) NOT NULL,
 	S_Add varchar(200) NOT NULL,
   J_Type varchar(20) NOT NULL,
-  DOB date NOT NULL,
+  DOB date NOT NULL
 );
 
 INSERT INTO Staff_Member
@@ -30,7 +32,7 @@ INSERT INTO Staff_Member
 VALUES
 ('S1001', 'Randil', 'Samarawickrama', 'No. 23, Hospital Road, Galle.', 'Manager', '1992.05.26'),
 ('S1002', 'Anuttara', 'Bandara', 'No. 4/32, School Road, Panadura.', 'Customer Support', '1993.08.02'),
-('S1003', 'Sangeeth', 'Selvakumar', 'No. 08, Garden Street, Hatton.', 'Executive', '1995.06.20', '65000'),
+('S1003', 'Sangeeth', 'Selvakumar', 'No. 08, Garden Street, Hatton.', 'Executive', '1995.06.20'),
 ('S1004', 'Kasun', 'Weerasingha', 'No.12, Galle Road, Colombo 03.', 'Assistant Manager', '1996.02.06'),
 ('S1005', 'Chamath', 'Guruge', 'No. 128/A, Main Road, Kurunagala.', 'Marketing Manager', '1990.12.07');
 
@@ -43,7 +45,7 @@ CREATE TABLE Booking(
   S_Time time,
   E_Time time,
   B_Date date,
-  N_At int,
+  N_At int
 );
 
 INSERT INTO Booking
@@ -61,7 +63,7 @@ CREATE TABLE Resources(
   RID char(5) PRIMARY KEY NOT NULL,
   R_Value varchar(100),
   Max_Att int,
-  R_Type varchar(200),
+  R_Type varchar(200)
 );
 
 INSERT INTO Resources
@@ -79,7 +81,7 @@ CREATE TABLE Feed_back(
   Name varchar(50) PRIMARY KEY not null,
   BID varchar(20)not null,
   Email varchar(20),
-  Cmnt varchar(100),
+  Cmnt varchar(100)
 );
 
 INSERT INTO Feed_back
